@@ -1,2 +1,2 @@
-# Skincare
-![Skincare](https://github.com/Edanriell/oldProjects-2/blob/master/AnimatedText/skincare.png?raw=true)
+# CultureNews
+![CultureNews](https://github.com/Edanriell/CultureNews/blob/master/CultureNews.png?raw=true)
