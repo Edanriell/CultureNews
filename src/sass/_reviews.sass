@@ -1,0 +1,66 @@
+$backgroundColor: #FFF
+$reviewItemBackgroundColor: #FFF
+$sectionHederColor: #000
+$descriptionColor: #202020
+
+=hoverEffects
+  h3
+    > a
+      color: #ff7931
+  img
+    filter: brightness(50%)
+
+.Reviews
+  background-color: $backgroundColor
+  padding-top: 48px
+  &-Content
+    position: relative
+.ReviewsList
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  align-items: center
+  padding-top: 25px
+  &-Item
+    width: 370px
+    height: 325px
+    box-sizing: border-box
+    margin-right: 25px
+    background-color: $reviewItemBackgroundColor
+    @media (max-width: 1800px)
+      margin-bottom: 20px
+    @media (max-width: 1400px)
+      margin-bottom: 20px
+    @media (max-width: 1280px)
+      margin-right: 0
+    &:nth-child(3n)
+      margin-right: 0
+.Review
+  position: relative
+  display: flex
+  flex-direction: column
+  &-Name
+    font-family: "Raleway-ExtraBold"
+    font-weight: 800
+    margin-top: 29px
+  &-Link
+    font-size: 2.3rem
+    color: $sectionHederColor
+    transition: all 0.25s ease-in-out
+  &-Image
+    width: inherit
+    height: inherit
+    vertical-align: middle
+    object-fit: cover
+    transition: all 0.25s ease-in-out
+  &-ImageWrapper
+    width: 370px
+    height: 200px
+    order: -1
+    transition: all 0.25s ease-in-out
+  &-Description
+    font-size: 1.4rem
+    color: $descriptionColor
+    margin-top: 16px
+  &:hover
+    +hoverEffects

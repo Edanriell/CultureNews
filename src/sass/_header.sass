@@ -1,0 +1,57 @@
+$backgroundColor: #FFF
+$underlineColor: #ff7931
+$mainNavTextHoverColor: #7c7c7c
+$mainNavFont: inherit
+$mainNavItemColor: #101010
+
+.Header
+  background: $backgroundColor
+  padding-top: 73px
+  padding-bottom: 51px
+  &-Content
+    display: flex
+    flex-direction: column
+    align-items: center
+.Logotype
+  width: 345px
+  height: 32px
+  vertical-align: middle
+  &-Wrapper
+    display: block
+.MainNav
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  &-Item
+    font-size: 1.64rem
+    margin-right: 57px
+    margin-top: 59px
+    font-family: "Raleway-Light"
+    font-weight: 300
+    &:last-child
+      margin-right: 0
+    @media (max-width: 660px)
+      margin-right: 20px
+  &-Link
+    font-family: $mainNavFont
+    color: $mainNavItemColor
+    text-transform: uppercase
+    display: block
+    position: relative
+    transition: all 0.5s ease-in-out
+    &::after 
+      position: absolute
+      content: ""
+      top: 20px
+      left: 0
+      width: 100%
+      height: 2px
+      background: $underlineColor
+      transform: scaleX(0)
+      transform-origin: right
+      transition: transform 0.5s
+    &:hover 
+      color: $mainNavTextHoverColor
+    &:hover::after 
+      transform: scaleX(1)
+      transform-origin: left
